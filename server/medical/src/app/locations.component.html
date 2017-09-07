@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    {{title}}!
+  </h1>
+  <ul class="locations">
+    <li *ngFor="let location of locations" (click)="onSelect(location)">
+      <span class="badge">{{location.id}}</span>{{location.name}}
+    </li>
+  </ul>
+  <location-detail [location]="selectedLocation"></location-detail>
+</div>
