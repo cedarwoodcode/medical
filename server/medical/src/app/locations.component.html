@@ -3,10 +3,18 @@
   <h1>
     {{title}}!
   </h1>
+  <div>
+  	<label>位置名称：</label> <input #locationName/>
+  	<button (click) = "add(locationName.value); locationName.value='';">新增</button>
+  </div>
   <ul class="locations">
     <li *ngFor="let location of locations" (click)="onSelect(location)">
-      <span class="badge">{{location.id}}</span>{{location.name}}
+      <span class="badge">{{location.id}}</span><span>{{location.name}}</span><button class="delete" (click) = "delete(location); $event.stopPropagation()">X</button>
     </li>
   </ul>
-  <location-detail [location]="selectedLocation"></location-detail>
+  <div *ngIf="selectedLocation">
+    <h2>
+      {{selectedLocation.name | uppercase}} 详情 <button (click) = "gotoDetail()">查看</button>
+    </h2>
+  </div>
 </div>

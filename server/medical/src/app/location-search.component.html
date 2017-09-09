@@ -1,0 +1,9 @@
+<div id="search-component">
+	<h4>位置查找</h4>
+	<input #searchBox id="search-box" (keyup) = "search(searchBox.value)"/>
+	<div>
+		<div *ngFor="let location of locations | async" (click) = "gotoDetail(location)" class="search-result">
+			{{location.name}}
+		</div>
+	</div>
+</div>

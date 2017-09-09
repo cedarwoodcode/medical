@@ -1,8 +1,11 @@
 <div *ngIf="location">
 	<h2>{{location.name}}详情</h2>
 	<div><label>id:</label>{{location.id}}</div>
+	
 	<div>
 		<label>名称:</label>
 		<input [(ngModel)]="location.name" placeholder="名称">
 	</div>
+	<button (click)="goBack()">返回</button>
+	<button (click) = "save()">修改</button>
 </div>

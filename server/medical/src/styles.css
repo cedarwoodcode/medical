@@ -1,56 +1,72 @@
 
-/* You can add global styles to this file, and also import other style files */
-.selected{
-	background-color: #cfd8dc !important;
-	color:white;
-} 
-
-.locations{
-	margin: 0 0 2em 0;
-	list-style-type:none;
-	padding:0;
-	width: 15em;
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
 }
 
-.locations li{
-	cursor: pointer;
-	position: relative;
-	left: 0;
-	background-color: #eee;
-	margin: 0.5em;
-	padding: 0.3em 0;
-	height: 1.6em;
-	border-radius: 4px; 
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
 }
 
-
-.locations li.selected:hover{
-	background-color: #bbd8dc !important;
-	color: white; 
+body {
+  margin: 2em;
 }
 
-.locations li:hover{
-	color: #0607d8b;
-	background-color: #ddd;
-	left: .1em;
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
 }
 
-.locations .text{
-	position: relative;
-	top: -3px;
+a {
+  cursor: pointer;
+  cursor: hand;
 }
 
-.locations .badge{
-	display: inline-block;
-	font-size: small;
-	color: white;
-	padding: 0.8em 0.7em 0 0.7em;
-	background-color: #607d8b;
-	line-height: 1em;
-	position: relative;
-	left: -1px;
-	top: -4px;
-	height: 1.8em;
-	margin-right: .8em;
-	border-radius: 4px 0 0 4px;
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
+}
+
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
 }
